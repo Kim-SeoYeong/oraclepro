@@ -32,8 +32,7 @@ public class PhoneApp {
 				System.out.println("*               감사합니다               *");
 				System.out.println("******************************************");
 				break;
-			}
-			
+			} else
 			//리스트 출력(select)
 			if (num == 1) {
 				//리스트 출력
@@ -46,8 +45,7 @@ public class PhoneApp {
 									   pvo.getHp() + "\t" + pvo.getCompany());
 				}
 				System.out.println("");
-			}
-			
+			} else
 			//등록(insert)
 			if (num == 2) {
 				System.out.println("< 2. 등록 >");
@@ -65,8 +63,7 @@ public class PhoneApp {
 				pDao.personInsert(pvo);
 				
 				System.out.println("");
-			}
-			
+			} else
 			//수정(update)
 			if(num == 3) {
 				System.out.println("< 3. 수정 >");
@@ -87,8 +84,7 @@ public class PhoneApp {
 				
 				PersonVo pvo = new PersonVo(personId, name, hp, company);
 				pDao.personUpdate(pvo);
-			}
-			
+			} else
 			//삭제(delete)
 			if(num == 4) {
 				System.out.println("< 4. 삭제 >");
@@ -97,8 +93,8 @@ public class PhoneApp {
 				personId = sc.nextInt();
 				
 				pDao.personDelete(personId);
-			}
-			
+			} else 
+			//검색(search)
 			if(num == 5) {
 				System.out.println("< 5. 검색 >");
 				
@@ -118,6 +114,9 @@ public class PhoneApp {
 				} else {
 					System.out.println("검색어를 입력해주세요.");
 				}
+			} else {
+				System.out.println("[ 다시 입력해주세요.] ");
+				System.out.println("");
 			}
 		}
 		
